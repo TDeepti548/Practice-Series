@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* The specificity of this selector is 1*/
+    h1{
+        color: aqua;
+    }
+    /* the specificity of this selector is 10*/
+    .yellow{
+        color: yellow;
+    }
+    /* the specificity of this selector is 10*/
+    .cred{
+        color: red;
+    }
+    /* the specificity of this selector is 10*/
+    .cpurple{
+        color: purple;
+        /* . lga kr purple ko sbse last me kr diye isliye ye purple vala color aa gya jo v selector ko last me krege . ya # ke sath vo vhi color ayega */
+    }
+    [data-x=a]{
+        background-color: yellow;
+   
+}/*this is the attribute selector*/ /* the specificity of this selector is 10*/
+/* the specificity of this photo is 1+10+10+10+10=41*/
+a.riyaclass.deepti-class[href]:hover{
+    color: violet;
+}
+</style>
+<body>
+<h1 class="yellow cred cpurple" data-x="a">CSS Specificity </h1>
+
+</body>
+</html>
